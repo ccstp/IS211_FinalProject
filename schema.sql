@@ -1,0 +1,21 @@
+DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS authors;
+DROP TABLE IF EXISTS post_author;
+
+CREATE TABLE posts (
+    post_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    publication_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    content TEXT NOT NULL,
+    published INT DEFAULT 1
+);
+
+CREATE TABLE authors (
+author_id INTEGER PRIMARY KEY AUTOINCREMENT,
+author_name TEXT NOT NULL
+);
+
+CREATE TABLE post_author (
+author_id INTEGER NOT NULL,
+post_id INTEGER NOT NULL
+);

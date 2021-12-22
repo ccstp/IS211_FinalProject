@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+<div align="right"><button onclick="document.location='/login'">Login</button></div>
+<h1 align="center">This is John's Blog</h1>
+<table border="1px black" align="center">
+    <tr>
+        <th width="200px">Post Title</th>
+        <th width="200px">Publication Date</th>
+        <th width="200px">Author</th>
+    </tr>
+    {% for posts in blog %}
+    <tr>
+        <td width="200px" align="center"><a href ="/{{ posts[4] }}">{{ posts[0] }}</a></td>
+        <td width="200px" align="center">{{ posts[1] }}</td>
+        <td width="200px" align="center">{{ posts[3] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
